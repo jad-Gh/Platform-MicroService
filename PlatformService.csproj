@@ -4,11 +4,18 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
     <UserSecretsId>3c5754c4-cb5e-4a56-aebe-d6cdef0a8ff3</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SyncDataServices\Http\NewFolder\**" />
+    <Content Remove="SyncDataServices\Http\NewFolder\**" />
+    <EmbeddedResource Remove="SyncDataServices\Http\NewFolder\**" />
+    <None Remove="SyncDataServices\Http\NewFolder\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
